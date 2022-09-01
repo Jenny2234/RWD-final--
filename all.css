@@ -61,6 +61,7 @@ img {
   /* ---------------------- */
   * {
     font-family: MicrosoftJhengHeiRegular;
+    color: #3D1101;
   }
   nav {
     display: flex;
@@ -179,7 +180,6 @@ img {
   .footer {
     padding: 1%;
     width: 33.33333%;
-    color: #3d1101;
   }
   .footer h3 {
     margin-bottom: 16px;
