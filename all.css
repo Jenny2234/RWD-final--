@@ -59,9 +59,14 @@ img {
     box-sizing: border-box;
   }
   /* ---------------------- */
+  .wrap {
+    background: #efe9e7;
+    max-width: 1024px;
+    margin: 0 auto;
+  }
   * {
     font-family: MicrosoftJhengHeiRegular;
-    color: #3D1101;
+    color: #3d1101;
   }
   nav {
     display: flex;
@@ -71,7 +76,7 @@ img {
   }
   nav h1 {
     margin: 17px;
-    background-image: url('img/logo_w(null).svg');
+    background-image: url("img/logo_w(null).svg");
     width: 120px;
     height: 24px;
     text-indent: 101%;
@@ -98,7 +103,7 @@ img {
   .showmenu {
     display: none;
   }
-  @media (max-width: 375px) {
+  @media (max-width: 576px) {
     .menu {
       /*隱藏選單開始*/
       max-height: 0;
@@ -163,9 +168,9 @@ img {
     font-size: 24px;
     color: #fff;
   }
-  @media (max-width: 375px) {
+  @media (max-width: 576px) {
     .banner {
-      background-image: url('https://i.imgur.com/BBxhL0o.png');
+      background-image: url("https://i.imgur.com/BBxhL0o.png");
     }
   }
   
@@ -180,6 +185,7 @@ img {
   .footer {
     padding: 1%;
     width: 33.33333%;
+    /*     color: #3d1101; */
   }
   .footer h3 {
     margin-bottom: 16px;
@@ -200,3 +206,196 @@ img {
       margin-bottom: 30px;
     }
   }
+  i{
+    color: white;
+  }
+  /* -------------------index首頁---------------------- */
+  .index-pdiv {
+    width: 210px;
+    margin: 0 auto;
+  }
+  .index-pdiv p {
+    margin-top: 40px;
+    margin-bottom: 10px;
+    font-size: 20px;
+    text-align: center;
+    line-height: 1.5;
+    font-weight: bold;
+  }
+  .tips {
+    display: flex;
+    justify-content: space-around;
+  }
+  .tips-item {
+    width: 30.333%;
+    padding: 1.5%;
+  }
+  .tips-item img {
+    display: block;
+    border-radius: 50%;
+    margin-bottom: 10px;
+    margin: 0 auto 20px auto;
+  }
+  .tips-item h3 {
+    margin: 10px;
+    text-align: center;
+    font-weight: bold;
+    font-size: 24px;
+  }
+  @media (max-width: 576px) {
+    .tips {
+      flex-direction: column;
+    }
+    .tips-item {
+      margin: 0 auto;
+      width: 80%;
+      padding: 5% 10% 5% 10%;
+    }
+  }
+  .chef {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    background: #3d1101;
+    width: 100%;
+  }
+  .chef img {
+    width: 45%;
+  }
+  .chef .text {
+    padding: 3%;
+    width: 45%;
+  }
+  .chef h4 {
+    color: White;
+    margin-top: 30px;
+    line-height: 1.5;
+    font-size: 20px;
+  }
+  .chef small {
+    color: White;
+    line-height: 1.5;
+  }
+  .chef p {
+    color: White;
+    margin-top: 20px;
+    line-height: 1.5;
+  }
+  @media (max-width: 576px) {
+    .chef {
+      flex-direction: column;
+    }
+    .chef img {
+      width: 100%;
+    }
+    .chef .text {
+      width: 90%;
+      padding: 10% 5% 10% 5%;
+    }
+    .chef h4 {
+      margin-top: 10px;
+    }
+  }
+  .impression {
+    width: 100%;
+    margin-bottom: 32px;
+    display: flex;
+    justify-content: space-around;
+    padding: 20px;
+  }
+  .impression-item {
+    width: 31.33333%;
+    display: flex;
+    justify-content: space-between;
+  }
+  .impression-item img {
+    width: 250px;
+    border-radius: 50%;
+  }
+  .impression-item .content {
+    padding: 13px;
+  }
+  .impression-item h4 {
+    font-weight: bold;
+    font-size: 18px;
+  }
+  .impression-item p {
+    padding: 16px 0;
+  }
+  .impression-item h5 {
+    text-align: right;
+  }
+  @media (max-width: 576px) {
+    .impression {
+      flex-direction: column;
+    }
+    .impression-item {
+      margin: 0 auto;
+      width: 80%;
+    }
+  }
+  @media (max-width: 375px) {
+    .impression-item {
+      width: 90%;
+    }
+  }
+  .Location{
+    background: #f6f4f3;
+    padding: 18px 21px;
+  }
+  .Location-display{
+    margin-top: 30px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+  }
+  .Location-display img{
+      width: 48%;
+  }
+  form{
+    width: 50%;
+    padding-left: 2%;
+  }
+  input{
+    margin-top: 6px;
+    margin-bottom: 12px;
+  /*   max-width: 363px; */
+    padding: 5px;
+  }
+  .btn{
+    display: flex;
+    flex-direction:row-reverse;
+  }
+  .submit{
+    padding: 6px;
+    width: 70px;
+    background: #F56C23;
+    border: none;
+    border-radius: 10%;
+    color: #fff;
+    margin-left: 11px;
+  }
+  .cancel{
+    padding: 6px;
+    width: 70px;
+    background: gray;
+    border: none;
+    border-radius: 10%;
+    color: #fff;
+    margin-left: 11px;
+  }
+  @media(max-width:576px){
+      .Location-display{
+      flex-direction:column;
+      }
+      .Location-display img{
+      width: 98%;
+      }
+    form{
+      margin-top: 20px;
+      margin-left: 20px;
+    width: 90%;
+  }
+  }
+  /* -------------------index首頁結束---------------------- */
+  
