@@ -216,8 +216,8 @@ img {
   }
   .top{
     position: fixed;
-    bottom: 30px;
-    right: 30px;
+    bottom: 10px;
+    right: 10px;
   }
   /* -------------------index首頁---------------------- */
   .index-pdiv {
@@ -417,6 +417,157 @@ img {
   }
 /* -------------------index首頁結束---------------------- */
 /* -------------------購物車cart---------------------- */
+.cart{
+  display: flex;
+  padding: 42px 42px 0 42px;
+  width: 100%;
+  justify-content: space-between;
+}
+.cart-list{
+  width: 20%;
+}
+.cart-list h2{
+  font-weight: bold;
+  margin-bottom: 16px;
+  font-size: 20px;
+}
+.bg-dark a{
+  background: #3D1101 100%;
+  color: rgb(255, 255, 255);
+}
+.cart-list a{
+  font-size: 16px;
+  display: block;
+  padding: 8px;
+  text-decoration: none;
+  border-bottom: 1px solid ;
+}
+
+.cart-content{
+  width: 78%;
+  /* border: 1px solid black; */
+}
+.content-btn{
+  display: flex;
+  justify-content: space-between;
+}
+.btn-input input{
+  margin: 0;
+}
+.btn-input a{
+  text-decoration: none;
+}
+.btn-btn a{
+  margin: 0 30px;
+  text-decoration: none;
+}
+.btn-btn i{
+  margin: 0 17px;
+  cursor: pointer;
+}
+@media(max-width:768px){
+  .cart{
+    flex-direction:column;
+  }
+  .cart-list{
+    width: 70%;
+    text-align: center;
+    margin: 0 auto;
+  }
+  .cart-content{
+    width: 100%;
+    margin-top: 20px;
+  }
+  .btn-input input{
+    margin: 0 0 0 30px;
+  }
+}
+@media(max-width:576px){
+  .content-btn{
+    flex-direction:column;
+    align-items: end;
+  }
+  .btn-input input{
+    margin: 0;
+  }
+  .btn-btn{
+    margin: 10px 0px;
+  }
+  .btn-btn i{
+    margin: 0 0 0 17px;
+    cursor: pointer;
+  }
+}
+.content-items{
+  display: flex;
+  flex-wrap:wrap;
+  justify-content: space-between;
+  margin-top: 10px;
+}
+.content-item{
+  width: 31.333%;
+  margin: 1%;
+  box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  position: relative;
+
+}
+.love-icon{
+  position: absolute;
+  top: 5px;
+  left: 5px;
+}
+.spa-icon{
+  position: absolute;
+  top: 0px;
+  right: 0px;
+}
+.box{
+  width: 80px;
+  height: 25px;
+  background: #00CC99 100%;
+  color: rgb(255, 255, 255);
+  padding: 5px;
+}
+.content-item h3{
+  font-size: 20px;
+  margin-top: 11px;
+  font-weight: bold;
+}
+.content-item small{
+  font-size: 12px;
+  margin-bottom: 8px;
+}
+.content-item hr{
+  width: 91px;
+}
+.content-item a{
+  display: block;
+  padding: 4px 36px;
+  font-size: 16px;
+  margin: 10px 5px;
+  border: 1px solid #FF5E45;
+  text-decoration: none;
+  color: #FF5E45;
+}
+@media(max-width:768px){
+  .content-item{
+    width: 40%;
+    margin: 10px auto;
+  }
+}
+@media(max-width:576px){
+  .content-items{
+    flex-direction:column;
+  }
+  .content-item{
+    width: 70%;
+    margin: 10px auto;
+  }
+}
+
+
+
 
 /* -------------------購物車cart結束---------------------- */
 /* -------------------login---------------------- */
