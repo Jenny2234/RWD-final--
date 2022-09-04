@@ -64,6 +64,9 @@ img {
     max-width: 1024px;
     margin: 0 auto;
   }
+  i{
+    color: white;
+  }
   * {
     font-family: MicrosoftJhengHeiRegular;
     color: #3d1101;
@@ -75,11 +78,12 @@ img {
     padding: 0 10px;
   }
   nav h1 {
-    margin: 17px;
+    margin-top: 10px;
+    display: block;
     background-image: url("img/logo_w(null).svg");
     width: 120px;
-    height: 24px;
-    text-indent: 101%;
+    height: 30px;
+    /* text-indent: 101%; */
     white-space: nowrap;
     overflow: hidden;
   }
@@ -87,7 +91,7 @@ img {
     display: flex;
   }
   nav ul li {
-    /*     padding: 17px; */
+        /* padding: 17px; */
     background: #000;
     color: rgb(255, 255, 255);
     text-align: center;
@@ -95,12 +99,16 @@ img {
   nav ul li a {
     display: block;
     width: 70px;
-    padding: 17px 17px 17px 0;
+    padding: 17px;
     cursor: pointer;
     color: #eee;
     text-decoration: none;
+    border-bottom: 3px solid transparent;
   }
-  .showmenu {
+  nav ul li a:hover {
+    border-bottom: 3px solid rgb(255, 255, 255);
+  }
+  .showMenu {
     display: none;
   }
   @media (max-width: 576px) {
@@ -123,7 +131,7 @@ img {
       width: 100%;
       text-align: center;
     }
-    .showmenu {
+    .showMenu {
       margin: 10px;
       display: block;
       text-decoration: none;
@@ -206,8 +214,10 @@ img {
       margin-bottom: 30px;
     }
   }
-  i{
-    color: white;
+  .top{
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
   }
   /* -------------------index首頁---------------------- */
   .index-pdiv {
@@ -235,6 +245,9 @@ img {
     border-radius: 50%;
     margin-bottom: 10px;
     margin: 0 auto 20px auto;
+  }
+  .tips-item img:hover{
+    transform:scale(1.2,1.2);
   }
   .tips-item h3 {
     margin: 10px;
@@ -301,7 +314,7 @@ img {
     margin-bottom: 32px;
     display: flex;
     justify-content: space-around;
-    padding: 20px;
+    padding: 10px;
   }
   .impression-item {
     width: 31.33333%;
@@ -359,14 +372,16 @@ img {
   input{
     margin-top: 6px;
     margin-bottom: 12px;
-  /*   max-width: 363px; */
+    /* max-width: 363px; */
     padding: 5px;
   }
   .btn{
     display: flex;
     flex-direction:row-reverse;
+
   }
   .submit{
+    line-height: 2;
     padding: 6px;
     width: 70px;
     background: #F56C23;
@@ -374,6 +389,8 @@ img {
     border-radius: 10%;
     color: #fff;
     margin-left: 11px;
+    margin-right: 25px;
+    cursor: pointer;
   }
   .cancel{
     padding: 6px;
@@ -383,19 +400,26 @@ img {
     border-radius: 10%;
     color: #fff;
     margin-left: 11px;
+    cursor: pointer;
   }
   @media(max-width:576px){
-      .Location-display{
-      flex-direction:column;
-      }
-      .Location-display img{
-      width: 98%;
-      }
+    .Location-display{
+    flex-direction:column;
+    }
+    .Location-display img{
+    width: 98%;
+    }
     form{
-      margin-top: 20px;
-      margin-left: 20px;
+    margin-top: 20px;
+    margin-left: 20px;
     width: 90%;
+    }
   }
-  }
-  /* -------------------index首頁結束---------------------- */
-  
+/* -------------------index首頁結束---------------------- */
+/* -------------------購物車cart---------------------- */
+
+/* -------------------購物車cart結束---------------------- */
+/* -------------------login---------------------- */
+/* -------------------login結束---------------------- */
+/* -------------------register---------------------- */
+/* -------------------register結束---------------------- */
