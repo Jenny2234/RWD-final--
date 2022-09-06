@@ -381,9 +381,10 @@ img {
 
   }
   .submit{
-    line-height: 2;
-    padding: 6px;
+    text-align: center;
+    padding: 9px 15px;
     width: 70px;
+    height: 32px;
     background: #F56C23;
     border: none;
     border-radius: 10%;
@@ -391,16 +392,21 @@ img {
     margin-left: 11px;
     margin-right: 25px;
     cursor: pointer;
+    text-decoration: none;
   }
   .cancel{
-    padding: 6px;
+    text-align: center;
+    padding: 9px 15px;
     width: 70px;
+    height: 32px;
     background: gray;
     border: none;
     border-radius: 10%;
     color: #fff;
     margin-left: 11px;
+    margin-right: 25px;
     cursor: pointer;
+    text-decoration: none;
   }
   @media(max-width:576px){
     .Location-display{
@@ -565,12 +571,163 @@ img {
     margin: 10px auto;
   }
 }
-
-
-
-
 /* -------------------購物車cart結束---------------------- */
 /* -------------------login---------------------- */
+.login{
+  flex-direction:column;
+  display: flex;
+  justify-content: center;
+}
+.login img{
+  display: block;
+  margin: 50px auto 0 auto;
+  text-align: center;
+}
+.login h2{
+  display: block;
+  line-height: 1.5;
+  margin: 10px auto 35px auto;
+}
+.login .card{
+  width: 300px;
+  height: 273px;
+  border-top: 2px solid #F56C23;
+  box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.2);
+  margin: 0 auto;
+}
+.card h2{
+  margin-bottom: 16px;
+  font-size: 18px;
+  font-weight: bold;
+  text-align: center;
+}
+.card small a{
+  font-size: 14px;
+  color: #F56C23;
+}
+.login-btn{
+  display: flex;
+  justify-content: space-between;
+}
+.login-btn .register{
+  display: block;
+  background: gray;
+  text-decoration: none;
+  width: 125px;
+  margin-top: 5px;
+  margin-right: 12px;
+  text-align: center;
+  border-radius: 5%;
+  padding: 10px;
+  color: #FFF;
+}
+.login-btn .login{
+  display: block;
+  background: #F56C23;
+  text-decoration: none;
+  width: 125px;
+  margin-top: 5px;
+  margin-right: 12px;
+  text-align: center;
+  border-radius: 5%;
+  padding: 10px;
+  color: #FFF;
+}
 /* -------------------login結束---------------------- */
 /* -------------------register---------------------- */
+.login .card-register{
+  width: 60%;
+  /* height: 273px; */
+  border-top: 2px solid #F56C23;
+  box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.2);
+  margin: 0 auto;
+}
+.card-register h2{
+  margin-bottom: 16px;
+  font-size: 18px;
+  font-weight: bold;
+  text-align: center;
+}
+.register-content{
+  display: flex;
+  justify-content: space-between;
+  padding: 0 15px 15px 15px;
+}
+.register-text p{
+  font-size: 18px;
+}
+.register-text{
+  width: 48%;
+padding: 1%;
+}
+.register-form{
+  width: 48%;
+padding: 1%;
+position: relative;
+
+}
+@media(max-width:768px){
+  .login .card-register{
+    width: 80%;
+  }
+  .register-content{
+    flex-direction:column
+  }
+  .register-text{
+    width: 98%;
+  padding: 1%;
+  }
+  .register-form{
+    margin-top: 20px;
+    width: 98%;
+    padding: 1%;
+  }
+  .register-form form{
+    margin: 0 auto;
+  }
+}
+@media(max-width:375px){
+  .login .card-register{
+    width: 90%;
+  }
+  .register-form{
+    margin-top: 20px;
+  }
+}
+
+.spa-input{
+  margin: 0;
+}
+.register-form small a{
+  font-size: 12px;
+  color: #F56C23;
+}
+.register-btn{
+  position: absolute;
+  right: 30px;
+  bottom: 0px;
+}
+.register-btn .login{
+  display: block;
+  background: #F56C23;
+  text-decoration: none;
+  width: 125px;
+  margin-top: 5px;
+  margin-right: 12px;
+  text-align: center;
+  border-radius: 5%;
+  padding: 10px;
+  color: #FFF;
+}
+
+
+
+
+
+
+
+
+
+
+
 /* -------------------register結束---------------------- */
