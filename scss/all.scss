@@ -1,0 +1,883 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+  }
+  
+  /* HTML5 display-role reset for older browsers */
+  
+  article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+    display: block;
+  }
+  
+  body {
+    line-height: 1;
+  }
+  
+  ol, ul {
+    list-style: none;
+  }
+  
+  blockquote, q {
+    quotes: none;
+  }
+  
+  blockquote {
+    &:before, &:after {
+      content: '';
+      content: none;
+    }
+  }
+  
+  q {
+    &:before, &:after {
+      content: '';
+      content: none;
+    }
+  }
+  
+  table {
+    border-collapse: collapse;
+    border-spacing: 0;
+  }
+  
+  /* --------------------- */
+  
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+  
+  * {
+    box-sizing: border-box;
+  
+    &::before, &::after {
+      box-sizing: border-box;
+    }
+  }
+  
+  /* ---------------------- */
+  
+  .wrap {
+    background: #efe9e7;
+    max-width: 1024px;
+    margin: 0 auto;
+  }
+  
+  i {
+    color: white;
+  }
+  
+  * {
+    font-family: MicrosoftJhengHeiRegular;
+    color: #3d1101;
+  }
+  
+  nav {
+    display: flex;
+    justify-content: space-between;
+    background: #000;
+    padding: 0 10px;
+  
+    h1 {
+      margin-top: 10px;
+      display: block;
+      background-image: url("img/logo_w(null).svg");
+      width: 120px;
+      height: 30px;
+  
+      /* text-indent: 101%; */
+      white-space: nowrap;
+      overflow: hidden;
+    }
+  
+    ul {
+      display: flex;
+  
+      li {
+        /* padding: 17px; */
+        background: #000;
+        color: rgb(255, 255, 255);
+        text-align: center;
+  
+        a {
+          display: block;
+          width: 70px;
+          padding: 17px;
+          cursor: pointer;
+          color: #eee;
+          text-decoration: none;
+          border-bottom: 3px solid transparent;
+  
+          &:hover {
+            border-bottom: 3px solid rgb(255, 255, 255);
+          }
+        }
+      }
+    }
+  }
+  
+  .showMenu {
+    display: none;
+  }
+  
+  @media (max-width: 576px) {
+    .menu {
+      /*隱藏選單開始*/
+      max-height: 0;
+      overflow: hidden;
+  
+      /*隱藏選單結束*/
+      transition: max-height 1s;
+  
+      /*絕對定位疊在網頁上*/
+      position: absolute;
+      z-index: 100;
+  
+      /*header 70px+1px*/
+      top: 56px;
+      right: 0;
+      left: 0;
+      flex-direction: column;
+  
+      li {
+        width: 100%;
+        text-align: center;
+      }
+    }
+  
+    .showMenu {
+      margin: 10px;
+      display: block;
+      text-decoration: none;
+      font-size: 25px;
+      color: #fff;
+      font-weight: bold;
+      padding: 5px;
+    }
+  
+    .header .showmenu:hover {
+      border: 5px dashed #ff9999;
+    }
+  
+    .menu-show .menu {
+      max-height: 500px;
+    }
+  }
+  
+  /* banner */
+  
+  .banner {
+    background-image: url("https://i.imgur.com/O96y6tl.png");
+    max-width: 100%;
+    height: 364px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 6px;
+  }
+  
+  .bannre-text {
+    max-width: 460px;
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.35);
+    line-height: 1.3;
+  
+    h2 {
+      font-size: 38px;
+      color: #fff;
+      text-align: center;
+    }
+  
+    p {
+      text-align: center;
+      font-size: 24px;
+      color: #fff;
+    }
+  }
+  
+  @media (max-width: 576px) {
+    .banner {
+      background-image: url("https://i.imgur.com/BBxhL0o.png");
+    }
+  }
+  
+  /* footer */
+  
+  footer {
+    padding: 35px;
+    background: #efe9e7;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+  }
+  
+  .footer {
+    padding: 1%;
+    width: 33.33333%;
+  
+    /*     color: #3d1101; */
+  
+    h3 {
+      margin-bottom: 16px;
+      font-size: 26px;
+    }
+  }
+  
+  .footer-bottom {
+    text-align: right;
+  }
+  
+  .footer img {
+    margin-bottom: 16px;
+  }
+  
+  @media (max-width: 768px) {
+    footer {
+      flex-direction: column;
+    }
+  
+    .footer {
+      width: 89%;
+      margin-bottom: 30px;
+    }
+  }
+  
+  .top {
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+  }
+  
+  /* -------------------index首頁---------------------- */
+  
+  .index-pdiv {
+    width: 210px;
+    margin: 0 auto;
+  
+    p {
+      margin-top: 40px;
+      margin-bottom: 10px;
+      font-size: 20px;
+      text-align: center;
+      line-height: 1.5;
+      font-weight: bold;
+    }
+  }
+  
+  .tips {
+    display: flex;
+    justify-content: space-around;
+  }
+  
+  .tips-item {
+    width: 30.333%;
+    padding: 1.5%;
+  
+    img {
+      display: block;
+      border-radius: 50%;
+      margin-bottom: 10px;
+      margin: 0 auto 20px auto;
+  
+      &:hover {
+        transform: scale(1.2, 1.2);
+      }
+    }
+  
+    h3 {
+      margin: 10px;
+      text-align: center;
+      font-weight: bold;
+      font-size: 24px;
+    }
+  }
+  
+  @media (max-width: 576px) {
+    .tips {
+      flex-direction: column;
+    }
+  
+    .tips-item {
+      margin: 0 auto;
+      width: 80%;
+      padding: 5% 10% 5% 10%;
+    }
+  }
+  
+  .chef {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    background: #3d1101;
+    width: 100%;
+  
+    img {
+      width: 45%;
+    }
+  
+    .text {
+      padding: 3%;
+      width: 45%;
+    }
+  
+    h4 {
+      color: White;
+      margin-top: 30px;
+      line-height: 1.5;
+      font-size: 20px;
+    }
+  
+    small {
+      color: White;
+      line-height: 1.5;
+    }
+  
+    p {
+      color: White;
+      margin-top: 20px;
+      line-height: 1.5;
+    }
+  }
+  
+  @media (max-width: 576px) {
+    .chef {
+      flex-direction: column;
+  
+      img {
+        width: 100%;
+      }
+  
+      .text {
+        width: 90%;
+        padding: 10% 5% 10% 5%;
+      }
+  
+      h4 {
+        margin-top: 10px;
+      }
+    }
+  }
+  
+  .impression {
+    width: 100%;
+    margin-bottom: 32px;
+    display: flex;
+    justify-content: space-around;
+    padding: 10px;
+  }
+  
+  .impression-item {
+    width: 31.33333%;
+    display: flex;
+    justify-content: space-between;
+  
+    img {
+      width: 250px;
+      border-radius: 50%;
+    }
+  
+    .content {
+      padding: 13px;
+    }
+  
+    h4 {
+      font-weight: bold;
+      font-size: 18px;
+    }
+  
+    p {
+      padding: 16px 0;
+    }
+  
+    h5 {
+      text-align: right;
+    }
+  }
+  
+  @media (max-width: 576px) {
+    .impression {
+      flex-direction: column;
+    }
+  
+    .impression-item {
+      margin: 0 auto;
+      width: 80%;
+    }
+  }
+  
+  @media (max-width: 375px) {
+    .impression-item {
+      width: 90%;
+    }
+  }
+  
+  .Location {
+    background: #f6f4f3;
+    padding: 18px 21px;
+  }
+  
+  .Location-display {
+    margin-top: 30px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+  
+    img {
+      width: 48%;
+    }
+  }
+  
+  form {
+    width: 50%;
+    padding-left: 2%;
+  }
+  
+  input {
+    margin-top: 6px;
+    margin-bottom: 12px;
+  
+    /* max-width: 363px; */
+    padding: 5px;
+  }
+  
+  .btn {
+    display: flex;
+    flex-direction: row-reverse;
+  }
+  
+  .submit {
+    text-align: center;
+    padding: 9px 15px;
+    width: 70px;
+    height: 32px;
+    background: #F56C23;
+    border: none;
+    border-radius: 10%;
+    color: #fff;
+    margin-left: 11px;
+    margin-right: 25px;
+    cursor: pointer;
+    text-decoration: none;
+  }
+  
+  .cancel {
+    text-align: center;
+    padding: 9px 15px;
+    width: 70px;
+    height: 32px;
+    background: gray;
+    border: none;
+    border-radius: 10%;
+    color: #fff;
+    margin-left: 11px;
+    margin-right: 25px;
+    cursor: pointer;
+    text-decoration: none;
+  }
+  
+  @media (max-width: 576px) {
+    .Location-display {
+      flex-direction: column;
+  
+      img {
+        width: 98%;
+      }
+    }
+  
+    form {
+      margin-top: 20px;
+      margin-left: 20px;
+      width: 90%;
+    }
+  }
+  
+  /* -------------------index首頁結束---------------------- */
+  /* -------------------購物車cart---------------------- */
+  
+  .cart {
+    display: flex;
+    padding: 42px 42px 0 42px;
+    width: 100%;
+    justify-content: space-between;
+  }
+  
+  .cart-list {
+    width: 20%;
+  
+    h2 {
+      font-weight: bold;
+      margin-bottom: 16px;
+      font-size: 20px;
+    }
+  }
+  
+  .bg-dark a {
+    background: #3D1101 100%;
+    color: rgb(255, 255, 255);
+  }
+  
+  .cart-list a {
+    font-size: 16px;
+    display: block;
+    padding: 8px;
+    text-decoration: none;
+    border-bottom: 1px solid;
+  }
+  
+  .cart-content {
+    width: 78%;
+  
+    /* border: 1px solid black; */
+  }
+  
+  .content-btn {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .btn-input {
+    input {
+      margin: 0;
+    }
+  
+    a {
+      text-decoration: none;
+    }
+  }
+  
+  .btn-btn {
+    a {
+      margin: 0 30px;
+      text-decoration: none;
+    }
+  
+    i {
+      margin: 0 17px;
+      cursor: pointer;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .cart {
+      flex-direction: column;
+    }
+  
+    .cart-list {
+      width: 70%;
+      text-align: center;
+      margin: 0 auto;
+    }
+  
+    .cart-content {
+      width: 100%;
+      margin-top: 20px;
+    }
+  
+    .btn-input input {
+      margin: 0 0 0 30px;
+    }
+  }
+  
+  @media (max-width: 576px) {
+    .content-btn {
+      flex-direction: column;
+      align-items: end;
+    }
+  
+    .btn-input input {
+      margin: 0;
+    }
+  
+    .btn-btn {
+      margin: 10px 0px;
+  
+      i {
+        margin: 0 0 0 17px;
+        cursor: pointer;
+      }
+    }
+  }
+  
+  .content-items {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-top: 10px;
+  }
+  
+  .content-item {
+    width: 31.333%;
+    margin: 1%;
+    box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    position: relative;
+  }
+  
+  .love-icon {
+    position: absolute;
+    top: 5px;
+    left: 5px;
+  }
+  
+  .spa-icon {
+    position: absolute;
+    top: 0px;
+    right: 0px;
+  }
+  
+  .box {
+    width: 80px;
+    height: 25px;
+    background: #00CC99 100%;
+    color: rgb(255, 255, 255);
+    padding: 5px;
+  }
+  
+  .content-item {
+    h3 {
+      font-size: 20px;
+      margin-top: 11px;
+      font-weight: bold;
+    }
+  
+    small {
+      font-size: 12px;
+      margin-bottom: 8px;
+    }
+  
+    hr {
+      width: 91px;
+    }
+  
+    a {
+      display: block;
+      padding: 4px 36px;
+      font-size: 16px;
+      margin: 10px 5px;
+      border: 1px solid #FF5E45;
+      text-decoration: none;
+      color: #FF5E45;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .content-item {
+      width: 40%;
+      margin: 10px auto;
+    }
+  }
+  
+  @media (max-width: 576px) {
+    .content-items {
+      flex-direction: column;
+    }
+  
+    .content-item {
+      width: 70%;
+      margin: 10px auto;
+    }
+  }
+  
+  /* -------------------購物車cart結束---------------------- */
+  /* -------------------login---------------------- */
+  
+  .login {
+    flex-direction: column;
+    display: flex;
+    justify-content: center;
+  
+    img {
+      display: block;
+      margin: 50px auto 0 auto;
+      text-align: center;
+    }
+  
+    h2 {
+      display: block;
+      line-height: 1.5;
+      margin: 10px auto 35px auto;
+    }
+  
+    .card {
+      width: 300px;
+      height: 273px;
+      border-top: 2px solid #F56C23;
+      box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.2);
+      margin: 0 auto;
+    }
+  }
+  
+  .card {
+    h2 {
+      margin-bottom: 16px;
+      font-size: 18px;
+      font-weight: bold;
+      text-align: center;
+    }
+  
+    small a {
+      font-size: 14px;
+      color: #F56C23;
+    }
+  }
+  
+  .login-btn {
+    display: flex;
+    justify-content: space-between;
+  
+    .register {
+      display: block;
+      background: gray;
+      text-decoration: none;
+      width: 125px;
+      margin-top: 5px;
+      margin-right: 12px;
+      text-align: center;
+      border-radius: 5%;
+      padding: 10px;
+      color: #FFF;
+    }
+  
+    .login {
+      display: block;
+      background: #F56C23;
+      text-decoration: none;
+      width: 125px;
+      margin-top: 5px;
+      margin-right: 12px;
+      text-align: center;
+      border-radius: 5%;
+      padding: 10px;
+      color: #FFF;
+    }
+  }
+  
+  /* -------------------login結束---------------------- */
+  /* -------------------register---------------------- */
+  
+  .login .card-register {
+    width: 60%;
+  
+    /* height: 273px; */
+    border-top: 2px solid #F56C23;
+    box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.2);
+    margin: 0 auto;
+  }
+  
+  .card-register h2 {
+    margin-bottom: 16px;
+    font-size: 18px;
+    font-weight: bold;
+    text-align: center;
+  }
+  
+  .register-content {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 15px 15px 15px;
+  }
+  
+  .register-text {
+    p {
+      font-size: 18px;
+    }
+  
+    width: 48%;
+    padding: 1%;
+  }
+  
+  .register-form {
+    width: 48%;
+    padding: 1%;
+    position: relative;
+  }
+  
+  @media (max-width: 768px) {
+    .login .card-register {
+      width: 80%;
+    }
+  
+    .register-content {
+      flex-direction: column;
+    }
+  
+    .register-text {
+      width: 98%;
+      padding: 1%;
+    }
+  
+    .register-form {
+      margin-top: 20px;
+      width: 98%;
+      padding: 1%;
+  
+      form {
+        margin: 0 auto;
+      }
+    }
+  }
+  
+  @media (max-width: 375px) {
+    .login .card-register {
+      width: 90%;
+    }
+  
+    .register-form {
+      margin-top: 20px;
+    }
+  }
+  
+  .spa-input {
+    margin: 0;
+  }
+  
+  .register-form small a {
+    font-size: 12px;
+    color: #F56C23;
+  }
+  
+  .register-btn {
+    position: absolute;
+    right: 30px;
+    bottom: 0px;
+  
+    .login {
+      display: block;
+      background: #F56C23;
+      text-decoration: none;
+      width: 125px;
+      margin-top: 5px;
+      margin-right: 12px;
+      text-align: center;
+      border-radius: 5%;
+      padding: 10px;
+      color: #FFF;
+    }
+  }
+  
+  /* -------------------register結束---------------------- */
+  
+  .grayHover:hover {
+    background: #050505;
+  }
+  
+  .orangeHover:hover {
+    background: #ff0202;
+  }
+  
+  .content-item a:hover {
+    background: #F56C23;
+    color: #fff;
+  }
