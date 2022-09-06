@@ -720,14 +720,14 @@ position: relative;
   color: #FFF;
 }
 
-
-
-
-
-
-
-
-
-
-
 /* -------------------register結束---------------------- */
+.grayHover:hover{
+  background: #050505;
+}
+.orangeHover:hover{
+  background: #ff0202;
+}
+.content-item a:hover{
+  background: #F56C23;
+  color: #fff;
+}
